@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Gift</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            margin: 0;
+            padding: 0;
+            background-color: #87CEEB; /* Light blue sky color */
+            overflow: hidden; /* Prevent scrollbars */
+            display: flex; /* Flexbox layout */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+        }
+
+        .container {
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 800px;
+            max-height: 800px;
+            position: relative;
+            z-index: 10; /* Ensure it appears above the background */
+        }
+
+        .present-box {
+            width: 400px;
+            height: 460px;
+            background-image: url('present-box.png'); /* Add a present box image here */
+            background-size: cover;
+            background-position: center;
+            margin: 0 auto 20px; /* Center the present box */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .download-button {
+            background-color: #f39c12; /* Gold button like a ribbon */
+            color: white;
+            border: none;
+            margin-top: 40px;
+            padding: 10px 20px;
+            font-size: 24px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1; /* Ensure button is above the present box */
+        }
+
+        .download-button:hover {
+            background-color: #e67e22; /* Darker gold on hover */
+        }
+
+        /* Maki Roll Styles */
+        .maki-roll {
+            width: 60px;
+            height: 30px;
+            background: radial-gradient(circle at 50% 50%, #f39c12, #d35400); /* Maki color */
+            border-radius: 15px;
+            position: absolute;
+            animation: fall 5s infinite ease-in-out;
+            background-image: url('maki-roll.png'); /* Add a maki roll image here */
+            background-size: cover;
+            background-position: center;
+            top: -40px; /* Start position above the top of the viewport */
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="heading">Среќен роденден!</h1>
+        <div class="present-box">
+            <a href="Targeted for Bitcoin_ Inside Ian Freeman’s Unjust Conviction by the Government.zip" download="Targeted for Bitcoin_ Inside Ian Freeman’s Unjust Conviction by the Government.zip" class="download-button">Download</a>
+        </div>
+        <p>Кликнете на кутијата за подарок за да го преземете вашето роденденско изненадување!</p>
+    </div>
+
+    <!-- Maki Roll Elements -->
+    <div class="maki-roll" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="maki-roll" style="left: 30%; animation-delay: 1s;"></div>
+    <div class="maki-roll" style="left: 50%; animation-delay: 2s;"></div>
+    <div class="maki-roll" style="left: 70%; animation-delay: 3s;"></div>
+    <div class="maki-roll" style="left: 90%; animation-delay: 4s;"></div>
+    <!-- Added Maki Rolls -->
+    <div class="maki-roll" style="left: 15%; animation-delay: 0.5s;"></div>
+    <div class="maki-roll" style="left: 35%; animation-delay: 1.5s;"></div>
+    <div class="maki-roll" style="left: 55%; animation-delay: 2.5s;"></div>
+    <div class="maki-roll" style="left: 75%; animation-delay: 3.5s;"></div>
+    <div class="maki-roll" style="left: 95%; animation-delay: 4.5s;"></div>
+
+    <script>
+        // Create additional maki rolls dynamically
+        for (let i = 0; i < 10; i++) {
+            let makiRoll = document.createElement('div');
+            makiRoll.className = 'maki-roll';
+            makiRoll.style.left = Math.random() * 100 + '%';
+            makiRoll.style.animationDelay = (Math.random() * 5) + 's'; // Random delay
+            document.body.appendChild(makiRoll);
+        }
+    </script>
+</body>
+</html>
